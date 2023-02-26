@@ -1,4 +1,4 @@
-Run-time and Memory Evaluation
+Run-time/Memory Evaluation
 
 Analyzing the pseudocode for loading data into the vector data structure, we can see that it has a time complexity of O(n) because it iterates through each line of the file once using a while loop. The memory usage is also O(n) because it creates a course object for each line of the file, which is then stored in the vector data structure.
 
