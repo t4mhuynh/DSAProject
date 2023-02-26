@@ -1,0 +1,25 @@
+Pseudocode for loading data into the vector data structure:
+
+1.	Define an empty vector data structure called "courses"
+2.	Open the "Course Information" file
+3.	Read the first line of the file
+4.	Use a while loop to iterate through each line of the file
+5.	Within the while loop, use a try-catch block to check for file format errors
+a. Ensure there are at least two parameters on each line
+b. Ensure any prerequisite that is provided on a line exists as a course in the file
+6.	If there are no file format errors, parse each line and store the course number, title, and prerequisites in variables
+7.	Create a new course object using the variables from step 6
+8.	Store the course object in the "courses" vector data structure
+9.	Read the next line of the file
+10.	Repeat steps 5-9 until the end of the file is reached
+
+
+Pseudocode for searching the data structure for a specific course and printing out course information and prerequisites:
+
+1.	Define a variable called "searchCourse" and prompt the user to input the course number they want to search for
+2.	Use a for loop to iterate through the "courses" vector data structure
+3.	Within the for loop, use an if statement to check if the course number of the current course object in the vector data structure matches the "searchCourse" variable
+4.	If the course number matches, print out the course information (course number, title, prerequisites)
+5.	If the course number does not match, move to the next object in the vector data structure
+6.	Repeat steps 3-5 until the end of the vector data structure is reached
+7.	If the course is not found, display "Course not found" to the user.
