@@ -1,0 +1,27 @@
+Run-time and Memory Evaluation
+
+Analyzing the pseudocode for loading data into the vector data structure, we can see that it has a time complexity of O(n) because it iterates through each line of the file once using a while loop. The memory usage is also O(n) because it creates a course object for each line of the file, which is then stored in the vector data structure.
+
+The program opens the "Course Information" file using a file input stream object, which reads the data from the file one line at a time using the getline function. Each line is then checked for formatting errors using a try-catch block, which ensures that each line has at least two parameters and that any prerequisites provided on a line exist as a course in the file. 
+
+If there are no formatting errors, the line is parsed, and the course number, title, and prerequisites are stored in variables. A new course object is created using these variables, and the course object is then stored in the "courses" vector data structure.
+
+The pseudocode for searching the data structure for a specific course and printing out course information and prerequisites has a time complexity of O(n) because it iterates through each course object in the vector data structure once using a for loop. The memory usage is O(1) because it only stores the "searchCourse" variable and the course object that matches the search criteria.
+
+To calculate the worst-case running time of reading the file and creating course objects, we can break down the pseudocode for loading data into the vector data structure into individual lines of code and count the number of times each line executes.
+
+1.  Define an empty vector data structure called "courses" - 1 time
+2.  Open the "Course Information" file - 1 time
+3.  Read the first line of the file - 1 time
+4.  Use a while loop to iterate through each line of the file - n + 1 times
+5.  Within the while loop, use a try-catch block to check for file format errors - n times
+      a. Ensure there are at least two parameters on each line - n times
+      b. Ensure any prerequisite that is provided on a line exists as a course in the file - n times
+6.  If there are no file format errors, parse each line and store the course number, title, and prerequisites in variables - n times
+7.  Create a new course object using the variables from step 6 - n times
+8.  Store the course object in the "courses" vector data structure - n times
+9.  Read the next line of the file - n times
+10. Repeat steps 5-9 until the end of the file is reached - n times
+
+The total number of times the lines of code execute is 5n + 5, so the worst-case running time of reading the file and creating course objects is O(n).
+In terms of maintainability, the pseudocode for loading data into the vector data structure and searching for a specific course is straightforward and easy to understand. The use of try-catch blocks helps to ensure that the data being read from the file is in the correct format, which increases the robustness of the program. The use of a vector data structure to store the course objects makes it easy to add or remove courses from the program, as well as to search for specific courses based on user input. Overall, the pseudocode demonstrates a solid understanding of data structures and algorithms and provides a good foundation for building a functional program.
