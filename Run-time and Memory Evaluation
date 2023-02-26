@@ -6,7 +6,7 @@ The program opens the "Course Information" file using a file input stream object
 
 If there are no formatting errors, the line is parsed, and the course number, title, and prerequisites are stored in variables. A new course object is created using these variables, and the course object is then stored in the "courses" vector data structure.
 
-The pseudocode for searching the data structure for a specific course and printing out course information and prerequisites has a time complexity of O(n) because it iterates through each course object in the vector data structure once using a for loop. The memory usage is O(1) because it only stores the "searchCourse" variable and the course object that matches the search criteria.
+The pseudocode for searching the data structure for a specific course and printing out course information and prerequisites has a time complexity of O(n) because it iterates through each course object in the vector data structure once using a for loop. The memory usage is O(1) because it only stores the "searchCourse" variable and the course object that matches the search criteria. 
 
 To calculate the worst-case running time of reading the file and creating course objects, we can break down the pseudocode for loading data into the vector data structure into individual lines of code and count the number of times each line executes.
 
